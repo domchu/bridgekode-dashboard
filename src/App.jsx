@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import {Box} from "@mui/material"
-import './App.css'
+import { Box } from "@mui/material";
 
 function App() {
   
