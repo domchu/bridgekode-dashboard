@@ -1,12 +1,20 @@
-import { useState } from "react";
-import { Box } from "@mui/material";
+import React from "react";
+import { colorModeContext, useMode } from "./theme";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 
 function App() {
+  const [theme, colorMode] = useMode();
+
   return (
     <>
-      <Box className="app">
-        <h2>Testing the dashboard</h2>
-      </Box>
+      <colorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Box className="app">
+            <main className="content"></main>
+          </Box>
+        </ThemeProvider>
+      </colorModeContext.Provider>
     </>
   );
 }
