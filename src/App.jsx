@@ -11,7 +11,9 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box className="app">
-            <main className="content"></main>
+            <main className="content">
+              <h1>Testing the dashboard</h1>
+            </main>
           </Box>
         </ThemeProvider>
       </colorModeContext.Provider>
