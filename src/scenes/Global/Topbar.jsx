@@ -16,7 +16,7 @@ const Topbar = () => {
   return (
     <>
       <Box display="flex" justifyContent="space-between" p={2}>
-        {/* SEARCH BAR */}
+        {/*LEFT HAND SEARCH BAR */}
         <Box
           display="flex"
           backgroundColor={colors.primary[500]}
@@ -28,7 +28,7 @@ const Topbar = () => {
           </IconButton>
         </Box>
 
-        {/* ICONS */}
+        {/* RIGHT HAND ICONS */}
         <Box display="flex">
           <IconButton onClick={colorMode.toggleColorMode}>
             {theme.palette.mode === "dark" ? (
