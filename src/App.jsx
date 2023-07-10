@@ -1,7 +1,7 @@
 import React from "react";
 import { colorModeContext, useMode } from "./theme";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
-// import Topbar from "./Scenes/Global/Topbar";
+import Topbar from "./Scenes/Global/Topbar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -13,8 +13,8 @@ function App() {
           <CssBaseline />
           <Box className="app">
             <main className="content">
-              {/* <Topbar /> */}
               <h1>Testing the dashboard</h1>
+              <Topbar />
             </main>
           </Box>
         </ThemeProvider>
