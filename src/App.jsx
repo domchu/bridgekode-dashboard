@@ -27,8 +27,8 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box className="app">
+            <Sidebar />
             <main className="content">
-              <h1>Testing the dashboard</h1>
               <Topbar />
               <Routes>
                 <Route path="/" element={<Dashboard />} />
