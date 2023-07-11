@@ -2,6 +2,7 @@ import React from "react";
 import { colorModeContext, useMode } from "./theme";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import Topbar from "./Scenes/Global/Topbar";
+// import Sidebar from "./Scenes/Global/Sidebar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -15,6 +16,7 @@ function App() {
             <main className="content">
               <h1>Testing the dashboard</h1>
               <Topbar />
+              {/* <Sidebar /> */}
             </main>
           </Box>
         </ThemeProvider>
