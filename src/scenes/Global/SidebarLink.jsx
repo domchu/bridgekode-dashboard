@@ -1,14 +1,14 @@
 import React, { useStae } from "react";
-import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-// import "~react-pro-sidebar/dist/css/styles.css";
+import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, useTheme, Typography } from "@mui/material";
 import { tokens } from "../../theme";
+// import "~react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
 // import MenuIcon from "@mui/icons-material/Menu";
-// import HomeIcon from "@mui/icons-material/Home";
+import HomeIcon from "@mui/icons-material/Home";
+import PeopleIcon from "@mui/icons-material/People";
 // import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 // import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-// import PeopleIcon from "@mui/icons-material/People";
 // import HelpIcon from "@mui/icons-material/Help";
 // import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 // import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 // import TimelineIcon from "@mui/icons-material/Timeline";
 // import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-const Sidebar = () => {
+const SidebarLink = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useStae(false);
@@ -51,7 +51,7 @@ const Sidebar = () => {
             {/* LOGO & MENU ICON */}
             <MenuItem
               onClick={() => setIsCollapsed(!isCollapsed)}
-              icon={isCollapsed ? <MenuIcon /> : undefined}
+              icon={isCollapsed ? <HomeIcon /> : undefined}
               style={{ margin: "10px 0px 20px 0px", color: colors.grey[100] }}
             >
               {isCollapsed && (
@@ -65,7 +65,7 @@ const Sidebar = () => {
                     ADMINIS
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                    <MenuIcon />
+                    <HomeIcon />
                   </IconButton>
                 </Box>
               )}
@@ -102,10 +102,26 @@ const Sidebar = () => {
             {/* MENU ITEMS */}
             <Box paddingLeft={isCollapsed ? undefined : "10%"}></Box>
           </Menu>
+
+          <IconButton>
+            <PeopleIcon />
+          </IconButton>
+          <IconButton>
+            <PeopleIcon />
+          </IconButton>
+          <IconButton>
+            <PeopleIcon />
+          </IconButton>
+          <IconButton>
+            <PeopleIcon />
+          </IconButton>
+          <IconButton>
+            <PeopleIcon />
+          </IconButton>
         </ProSidebar>
       </Box>
     </>
   );
 };
 
-export default Sidebar;
+export default SidebarLink;

@@ -3,7 +3,7 @@ import { colorModeContext, useMode } from "./theme";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import Topbar from "./Scenes/Global/Topbar";
 import { Route, Routes } from "react-router-dom";
-import Sidebar from "./Scenes/Global/Sidebar";
+import SidebarLink from "./Scenes/Global/SidebarLink";
 import Dashboard from "./Scenes/dashboard";
 // import Team from "./Scenes/team";
 // import Clients from "./Scenes/clients";
