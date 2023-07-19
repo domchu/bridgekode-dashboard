@@ -3,7 +3,8 @@ import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 // import "~react-pro-sidebar/dist/css/styles.css";
 import { Box, IconButton, useTheme, Typography } from "@mui/material";
 import { tokens } from "../../theme";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import MenuIcon from "@mui/icons-material/Menu";
 // import HomeIcon from "@mui/icons-material/Home";
 // import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 // import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -16,7 +17,6 @@ import { tokens } from "../../theme";
 // import PieChartOutlineIcon from "@mui/icons-material/PieChartOutline";
 // import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 // import LegendToggleIcon from "@mui/icons-material/LegendToggle";
-// import MenuIcon from "@mui/icons-material/Menu";
 // import TimelineIcon from "@mui/icons-material/Timeline";
 // import LocationOnIcon from "@mui/icons-material/LocationOn";
 
@@ -46,9 +46,31 @@ const Sidebar = () => {
           },
         }}
       >
-        <ProSidebar>
-          <Menu>
-            <MenuItem></MenuItem>
+        <ProSidebar colllapsed={isCollapsed}>
+          <Menu iconShape="square">
+            {/* LOGO & MENU ICON */}
+            <MenuItem
+              onClick={() => setIsCollapsed(!isCollapsed)}
+              icon={isCollapsed ? <MenuIcon /> : undefined}
+              style={{ margin: "10px 0px 20px 0px", color: colors.grey[100] }}
+            >
+              {isCollapsed && (
+                <Box
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  ml="15px"
+                >
+                  <Typography variant="h3" color={colors.grey[100]}>
+                    ADMINIS
+                  </Typography>
+                  <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                    <MenuIcon />
+                  </IconButton>
+                </Box>
+              )}
+            </MenuItem>
+
             {/* USER */}
             {isCollapsed && (
               <Box mb="25px">
@@ -76,6 +98,9 @@ const Sidebar = () => {
                 </Box>
               </Box>
             )}
+
+            {/* MENU ITEMS */}
+            <Box paddingLeft={isCollapsed ? undefined : "10%"}></Box>
           </Menu>
         </ProSidebar>
       </Box>
