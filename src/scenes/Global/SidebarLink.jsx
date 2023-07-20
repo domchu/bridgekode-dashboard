@@ -46,7 +46,7 @@ const SidebarLink = () => {
           },
         }}
       >
-        <ProSidebar colllapsed={isCollapsed}>
+        <Sidebar colllapsed={isCollapsed}>
           <Menu iconShape="square">
             {/* LOGO & MENU ICON */}
             <MenuItem
@@ -118,7 +118,7 @@ const SidebarLink = () => {
           <IconButton>
             <PeopleIcon />
           </IconButton>
-        </ProSidebar>
+        </Sidebar>
       </Box>
     </>
   );
