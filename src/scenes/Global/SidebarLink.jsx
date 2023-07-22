@@ -17,7 +17,7 @@ import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 import LegendToggleIcon from "@mui/icons-material/LegendToggle";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-// import "~react-pro-sidebar/dist/css/styles.css";
+// import "react-pro-sidebar/dist/css/styles.css";
 
 const SidebarLink = () => {
   const theme = useTheme();
@@ -64,14 +64,14 @@ const SidebarLink = () => {
                     ADMINIS
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                    <HomeIcon />
+                    <MenuIcon />
                   </IconButton>
                 </Box>
               )}
             </MenuItem>
 
             {/* USER */}
-            {isCollapsed && (
+            {!isCollapsed && (
               <Box mb="25px">
                 <Box display="flex" justifyContent="center" alignItems="center">
                   <img
