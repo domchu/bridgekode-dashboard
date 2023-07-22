@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import HelpIcon from "@mui/icons-material/Help";
-import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import EscalatorWarningIcon from "@mui/icons-material/EscalatorWarning";
 import BarChartIcon from "@mui/icons-material/BarChart";
@@ -19,11 +18,30 @@ import TimelineIcon from "@mui/icons-material/Timeline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 // import "react-pro-sidebar/dist/css/styles.css";
 
+const Item = ({ title, to, icon, selected, setSelected }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+  return (
+    <>
+      <MenuItem
+        active={selected === title}
+        style={{ color: colors.grey[100] }}
+        onClick={() => setSelected(title)}
+        icon={icon}
+      >
+        <Typography>{title} </Typography>
+        <Link to={to} />
+      </MenuItem>
+    </>
+  );
+};
+
 const SidebarLink = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [Selected, setSelected] = useState("Dashboard");
+  const [selected, setSelected] = useState("Dashboard");
   return (
     <>
       <Box
@@ -50,7 +68,7 @@ const SidebarLink = () => {
             {/* LOGO & MENU ICON */}
             <MenuItem
               onClick={() => setIsCollapsed(!isCollapsed)}
-              icon={isCollapsed ? <HomeIcon /> : undefined}
+              icon={isCollapsed ? <MenuIcon /> : undefined}
               style={{ margin: "10px 0px 20px 0px", color: colors.grey[100] }}
             >
               {isCollapsed && (
@@ -75,11 +93,11 @@ const SidebarLink = () => {
               <Box mb="25px">
                 <Box display="flex" justifyContent="center" alignItems="center">
                   <img
-                    src={`../../assets/logo-blue.png`}
+                    src={`../../assets/bridgekode-logo.png`}
                     alt="Brand Logo"
-                    width="100px"
-                    height="100px"
-                    style={{ cursor: "pointer", borderRadius: "50%" }}
+                    width="150px"
+                    height="auto"
+                    style={{ cursor: "pointer" }}
                   />
                 </Box>
                 <Box textAlign="center">
@@ -92,58 +110,101 @@ const SidebarLink = () => {
                     Bridgekode
                   </Typography>
                   <Typography variant="h5" color={colors.greenAccent[500]}>
-                    User Admin
+                    User/Admin
                   </Typography>
                 </Box>
               </Box>
             )}
 
             {/* MENU ITEMS */}
-            <Box paddingLeft={isCollapsed ? undefined : "10%"}></Box>
-          </Menu>
+            <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+              <Item
+                title="Dashboard"
+                to="/"
+                icon={<HomeIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
 
-          <IconButton>
-            <HomeIcon />
-          </IconButton>
-          <IconButton>
-            <PeopleIcon />
-          </IconButton>
-          <IconButton>
-            <HelpIcon />
-          </IconButton>
-          <IconButton>
-            <AddIcCallIcon />
-          </IconButton>
-          <IconButton>
-            <ReceiptLongIcon />
-          </IconButton>
-          <IconButton>
-            <EscalatorWarningIcon />
-          </IconButton>
-          <IconButton>
-            <BarChartIcon />
-          </IconButton>
-          <IconButton>
-            <PieChartOutlineIcon />
-          </IconButton>
-          <IconButton>
-            <DonutLargeIcon />
-          </IconButton>
-          <IconButton>
-            <LegendToggleIcon />
-          </IconButton>
-          <IconButton>
-            <TimelineIcon />
-          </IconButton>
-          <IconButton>
-            <LocationOnIcon />
-          </IconButton>
-          <IconButton>
-            <MenuIcon />
-          </IconButton>
-          <IconButton>
-            <CalendarMonthIcon />
-          </IconButton>
+              <Typography
+                variant="h6"
+                color={colors.grey[300]}
+                sx={{ m: "15px 0px 5px 20px" }}
+              >
+                Data
+              </Typography>
+              <Item
+                title="Manage Team"
+                to="/team"
+                icon={<EscalatorWarningIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Contact Information"
+                to="/contacts"
+                icon={<ReceiptLongIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Invoices Balances"
+                to="/invoices"
+                icon={<ReceiptLongIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Profile Form"
+                to="/form"
+                icon={<PeopleIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Calendar"
+                to="/calendar"
+                icon={<CalendarMonthIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="FAQ Page"
+                to="/faq"
+                icon={<HelpIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Bar Chart"
+                to="/bar"
+                icon={<BarChartIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Pie Chart"
+                to="/pie"
+                icon={<PieChartOutlineIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Line Chart"
+                to="/line"
+                icon={<TimelineIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Geography Chart"
+                to="/geography"
+                icon={<LocationOnIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+            </Box>
+          </Menu>
         </Sidebar>
       </Box>
     </>
