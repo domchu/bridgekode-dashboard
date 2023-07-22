@@ -1,4 +1,4 @@
-import React, { useStae } from "react";
+import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, useTheme, Typography } from "@mui/material";
 import { tokens } from "../../theme";
@@ -23,8 +23,8 @@ import PeopleIcon from "@mui/icons-material/People";
 const SidebarLink = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [isCollapsed, setIsCollapsed] = useStae(false);
-  const [Selected, setSelected] = useStae("Dashboard");
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [Selected, setSelected] = useState("Dashboard");
   return (
     <>
       <Box

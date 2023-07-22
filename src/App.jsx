@@ -3,7 +3,7 @@ import { colorModeContext, useMode } from "./theme";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import Topbar from "./Scenes/Global/Topbar";
 import { Route, Routes } from "react-router-dom";
-// import SidebarLink from "./Scenes/Global/SidebarLink";
+import SidebarLink from "./Scenes/Global/SidebarLink";
 import Dashboard from "./Scenes/dashboard";
 // import Team from "./Scenes/team";
 // import Clients from "./Scenes/clients";
@@ -27,7 +27,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box className="app">
-            {/* <SidebarLink /> */}
+            <SidebarLink />
             <main className="content">
               <Topbar />
               <Routes>
