@@ -2,23 +2,22 @@ import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, useTheme, Typography } from "@mui/material";
 import { tokens } from "../../theme";
-// import "~react-pro-sidebar/dist/css/styles.css";
-import { Link } from "react-router-dom";
-// import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import PeopleIcon from "@mui/icons-material/People";
-// import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-// import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-// import HelpIcon from "@mui/icons-material/Help";
-// import AddIcCallIcon from "@mui/icons-material/AddIcCall";
-// import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
-// import EscalatorWarningIcon from "@mui/icons-material/EscalatorWarning";
-// import BarChartIcon from "@mui/icons-material/BarChart";
-// import PieChartOutlineIcon from "@mui/icons-material/PieChartOutline";
-// import DonutLargeIcon from "@mui/icons-material/DonutLarge";
-// import LegendToggleIcon from "@mui/icons-material/LegendToggle";
-// import TimelineIcon from "@mui/icons-material/Timeline";
-// import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import HelpIcon from "@mui/icons-material/Help";
+import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import EscalatorWarningIcon from "@mui/icons-material/EscalatorWarning";
+import BarChartIcon from "@mui/icons-material/BarChart";
+import PieChartOutlineIcon from "@mui/icons-material/PieChartOutline";
+import DonutLargeIcon from "@mui/icons-material/DonutLarge";
+import LegendToggleIcon from "@mui/icons-material/LegendToggle";
+import TimelineIcon from "@mui/icons-material/Timeline";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+// import "~react-pro-sidebar/dist/css/styles.css";
 
 const SidebarLink = () => {
   const theme = useTheme();
@@ -104,19 +103,46 @@ const SidebarLink = () => {
           </Menu>
 
           <IconButton>
-            <PeopleIcon />
+            <HomeIcon />
           </IconButton>
           <IconButton>
             <PeopleIcon />
           </IconButton>
           <IconButton>
-            <PeopleIcon />
+            <HelpIcon />
           </IconButton>
           <IconButton>
-            <PeopleIcon />
+            <AddIcCallIcon />
           </IconButton>
           <IconButton>
-            <PeopleIcon />
+            <ReceiptLongIcon />
+          </IconButton>
+          <IconButton>
+            <EscalatorWarningIcon />
+          </IconButton>
+          <IconButton>
+            <BarChartIcon />
+          </IconButton>
+          <IconButton>
+            <PieChartOutlineIcon />
+          </IconButton>
+          <IconButton>
+            <DonutLargeIcon />
+          </IconButton>
+          <IconButton>
+            <LegendToggleIcon />
+          </IconButton>
+          <IconButton>
+            <TimelineIcon />
+          </IconButton>
+          <IconButton>
+            <LocationOnIcon />
+          </IconButton>
+          <IconButton>
+            <MenuIcon />
+          </IconButton>
+          <IconButton>
+            <CalendarMonthIcon />
           </IconButton>
         </Sidebar>
       </Box>
