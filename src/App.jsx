@@ -10,7 +10,7 @@ import Clients from "./Scenes/clients";
 import Invoices from "./Scenes/invoices";
 import Students from "./Scenes/students";
 import Bar from "./Scenes/bar";
-import Contacts from "./Scenes/contacts";
+// import Contacts from "./Scenes/contacts";
 import Calendar from "./Scenes/calendar";
 import Form from "./Scenes/form";
 import Line from "./Scenes/line";
@@ -33,7 +33,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/team" element={<Team />} />
-                <Route path="/contacts" element={<Contacts />} />
+                {/* <Route path="/contacts" element={<Contacts />} /> */}
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/clients" element={<Clients />} />
                 <Route path="/students" element={<Students />} />

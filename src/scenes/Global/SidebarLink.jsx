@@ -141,8 +141,15 @@ const SidebarLink = () => {
                 setSelected={setSelected}
               />
               <Item
-                title="Contact Information"
-                to="/contacts"
+                title="Clients Information"
+                to="/client"
+                icon={<ReceiptLongIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Students Information"
+                to="/students"
                 icon={<ReceiptLongIcon />}
                 selected={selected}
                 setSelected={setSelected}
@@ -154,6 +161,13 @@ const SidebarLink = () => {
                 selected={selected}
                 setSelected={setSelected}
               />
+              <Typography
+                variant="h6"
+                color={colors.grey[300]}
+                sx={{ m: "15px 0px 5px 20px" }}
+              >
+                Pages
+              </Typography>
               <Item
                 title="Profile Form"
                 to="/form"
@@ -175,6 +189,13 @@ const SidebarLink = () => {
                 selected={selected}
                 setSelected={setSelected}
               />
+              <Typography
+                variant="h6"
+                color={colors.grey[300]}
+                sx={{ m: "15px 0px 5px 20px" }}
+              >
+                Chart
+              </Typography>
               <Item
                 title="Bar Chart"
                 to="/bar"
