@@ -142,7 +142,7 @@ const SidebarLink = () => {
               />
               <Item
                 title="Clients Information"
-                to="/client"
+                to="/clients"
                 icon={<ReceiptLongIcon />}
                 selected={selected}
                 setSelected={setSelected}
@@ -218,7 +218,7 @@ const SidebarLink = () => {
                 setSelected={setSelected}
               />
               <Item
-                title="Geography Chart"
+                title="Geographical Chart"
                 to="/geography"
                 icon={<LocationOnIcon />}
                 selected={selected}

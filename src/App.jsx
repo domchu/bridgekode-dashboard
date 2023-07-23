@@ -7,14 +7,14 @@ import SidebarLink from "./Scenes/Global/SidebarLink";
 import Dashboard from "./Scenes/dashboard";
 import Team from "./Scenes/team";
 import Clients from "./Scenes/clients";
-import Invoices from "./Scenes/invoices";
 import Students from "./Scenes/students";
-import Bar from "./Scenes/bar";
-import Calendar from "./Scenes/calendar";
+import Invoices from "./Scenes/invoices";
 import Form from "./Scenes/form";
+import Calendar from "./Scenes/calendar";
+import FAQ from "./Scenes/faq";
+import Bar from "./Scenes/bar";
 import Line from "./Scenes/line";
 import Pie from "./Scenes/pie";
-import FAQ from "./Scenes/faq";
 import Geography from "./Scenes/geography";
 
 function App() {
@@ -32,12 +32,12 @@ function App() {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/team" element={<Team />} />
-                <Route path="/invoices" element={<Invoices />} />
                 <Route path="/clients" element={<Clients />} />
                 <Route path="/students" element={<Students />} />
+                <Route path="/invoices" element={<Invoices />} />
                 <Route path="/form" element={<Form />} />
-                <Route path="/faq" element={<FAQ />} />
                 <Route path="/calendar" element={<Calendar />} />
+                <Route path="/faq" element={<FAQ />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/line" element={<Line />} />
