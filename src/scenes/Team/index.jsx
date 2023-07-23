@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { DataGrid } from "@mui/x-data-grid";
-import { mockDataTeam } from "./../../data/mockdata";
+import { mockDataTeam } from "../../data/mockdata";
 import Header from "../../Components/Header";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
