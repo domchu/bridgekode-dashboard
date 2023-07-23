@@ -12,10 +12,10 @@ import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import EscalatorWarningIcon from "@mui/icons-material/EscalatorWarning";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import PieChartOutlineIcon from "@mui/icons-material/PieChartOutline";
-import DonutLargeIcon from "@mui/icons-material/DonutLarge";
-import LegendToggleIcon from "@mui/icons-material/LegendToggle";
+import SettingsIcon from "@mui/icons-material/Settings";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LightModeIcon from "@mui/icons-material/LightMode";
 // import "react-pro-sidebar/dist/css/styles.css";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -224,6 +224,24 @@ const SidebarLink = () => {
                 selected={selected}
                 setSelected={setSelected}
               />
+              <Box
+                sx={{
+                  m: "15px 0px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <IconButton sx={{ m: "0px 5px" }}>
+                  <SettingsIcon />
+                </IconButton>
+                <IconButton sx={{ m: "0px 5px" }}>
+                  <HomeIcon />
+                </IconButton>
+                <IconButton sx={{ m: "0px 5px" }}>
+                  <LightModeIcon />
+                </IconButton>
+              </Box>
             </Box>
           </Menu>
         </Sidebar>
