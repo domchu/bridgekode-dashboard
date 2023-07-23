@@ -110,7 +110,7 @@ const SidebarLink = () => {
                     ADMINIS
                   </Typography>
                   <Typography variant="h5" color={colors.greenAccent[500]}>
-                    USER
+                    VP Fancy Admin
                   </Typography>
                 </Box>
               </Box>
