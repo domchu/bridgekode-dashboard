@@ -23,7 +23,7 @@ const Team = () => {
     {
       field: "age",
       headerName: "Age",
-      type: number,
+      type: "number",
       headerAlign: "left",
       align: "left",
     },
