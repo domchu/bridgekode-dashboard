@@ -1,4 +1,4 @@
-import React, { useStae } from "react";
+import React, { useState } from "react";
 
 const dashboard = () => {
   return (
