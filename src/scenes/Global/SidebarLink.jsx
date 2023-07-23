@@ -123,7 +123,7 @@ const SidebarLink = () => {
               <Item
                 title="Dashboard"
                 to="/"
-                icon={<HomeIcon />}
+                icon={<HomeIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
@@ -138,28 +138,28 @@ const SidebarLink = () => {
               <Item
                 title="Manage Team"
                 to="/team"
-                icon={<EscalatorWarningIcon />}
+                icon={<EscalatorWarningIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Invoices Balances"
                 to="/invoices"
-                icon={<ReceiptLongIcon />}
+                icon={<ReceiptLongIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Clients Information"
                 to="/clients"
-                icon={<FamilyRestroomIcon />}
+                icon={<FamilyRestroomIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Students Information"
                 to="/students"
-                icon={<GroupsIcon />}
+                icon={<GroupsIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
@@ -174,21 +174,21 @@ const SidebarLink = () => {
               <Item
                 title="Profile Form"
                 to="/form"
-                icon={<PeopleIcon />}
+                icon={<PeopleIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Calendar"
                 to="/calendar"
-                icon={<CalendarMonthIcon />}
+                icon={<CalendarMonthIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="FAQ Page"
                 to="/faq"
-                icon={<HelpIcon />}
+                icon={<HelpIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
@@ -202,31 +202,33 @@ const SidebarLink = () => {
               <Item
                 title="Bar Chart"
                 to="/bar"
-                icon={<BarChartIcon />}
+                icon={<BarChartIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Pie Chart"
                 to="/pie"
-                icon={<PieChartOutlineIcon />}
+                icon={<PieChartOutlineIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Line Chart"
                 to="/line"
-                icon={<TimelineIcon />}
+                icon={<TimelineIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Geographical Chart"
                 to="/geography"
-                icon={<LocationOnIcon />}
+                icon={<LocationOnIcon className="icons" />}
                 selected={selected}
                 setSelected={setSelected}
               />
+
+              {/* SIDEBAR FOOTER */}
               <Box
                 sx={{
                   m: "15px 0px",

@@ -100,4 +100,17 @@ export const mockDataTeam = [
   },
 ];
 
-export const mockDataContacts = [{}];
+export const mockDataContacts = [
+  {
+    id: "1",
+    name: "Ochu Dominic",
+    email: "ochudominic@gmail.com",
+    job: "Front-end dev.",
+    age: "30",
+    phone: "07034278995",
+    address: "5 Ayeni street, cele ishashi. Ojo-Lagos state",
+    zipcode: "23401",
+    city: "okokomaiko",
+    access: "admin",
+  },
+];
