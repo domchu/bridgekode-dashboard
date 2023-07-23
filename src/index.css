@@ -36,3 +36,8 @@ html, body, #root, .app, .content {
 ::-webkit-scrollbar-track:hover{
   background-color: #555;
 }
+.icons{
+  color: #888888;
+  /* color: cornflowerblue; */
+  font-size: 1.5rem !important;
+}

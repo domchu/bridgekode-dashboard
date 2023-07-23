@@ -1,30 +1,49 @@
-import React, { useStae } from "react";
+import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, useTheme, Typography } from "@mui/material";
 import { tokens } from "../../theme";
-// import "~react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
-// import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import PeopleIcon from "@mui/icons-material/People";
-// import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-// import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-// import HelpIcon from "@mui/icons-material/Help";
-// import AddIcCallIcon from "@mui/icons-material/AddIcCall";
-// import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
-// import EscalatorWarningIcon from "@mui/icons-material/EscalatorWarning";
-// import BarChartIcon from "@mui/icons-material/BarChart";
-// import PieChartOutlineIcon from "@mui/icons-material/PieChartOutline";
-// import DonutLargeIcon from "@mui/icons-material/DonutLarge";
-// import LegendToggleIcon from "@mui/icons-material/LegendToggle";
-// import TimelineIcon from "@mui/icons-material/Timeline";
-// import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MenuIcon from "@mui/icons-material/Menu";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import HelpIcon from "@mui/icons-material/Help";
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import EscalatorWarningIcon from "@mui/icons-material/EscalatorWarning";
+import BarChartIcon from "@mui/icons-material/BarChart";
+import PieChartOutlineIcon from "@mui/icons-material/PieChartOutline";
+import SettingsIcon from "@mui/icons-material/Settings";
+import TimelineIcon from "@mui/icons-material/Timeline";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import GroupsIcon from "@mui/icons-material/Groups";
+import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
+// import "react-pro-sidebar/dist/css/styles.css";
+
+const Item = ({ title, to, icon, selected, setSelected }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+  return (
+    <>
+      <MenuItem
+        active={selected === title}
+        style={{ color: colors.grey[100] }}
+        onClick={() => setSelected(title)}
+        icon={icon}
+      >
+        <Typography>{title} </Typography>
+        <Link to={to} />
+      </MenuItem>
+    </>
+  );
+};
 
 const SidebarLink = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [isCollapsed, setIsCollapsed] = useStae(false);
-  const [Selected, setSelected] = useStae("Dashboard");
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [selected, setSelected] = useState("Dashboard");
   return (
     <>
       <Box
@@ -51,10 +70,10 @@ const SidebarLink = () => {
             {/* LOGO & MENU ICON */}
             <MenuItem
               onClick={() => setIsCollapsed(!isCollapsed)}
-              icon={isCollapsed ? <HomeIcon /> : undefined}
+              icon={isCollapsed ? <MenuIcon /> : undefined}
               style={{ margin: "10px 0px 20px 0px", color: colors.grey[100] }}
             >
-              {isCollapsed && (
+              {!isCollapsed && (
                 <Box
                   display="flex"
                   justifyContent="space-between"
@@ -62,62 +81,174 @@ const SidebarLink = () => {
                   ml="15px"
                 >
                   <Typography variant="h3" color={colors.grey[100]}>
-                    ADMINIS
+                    BRIDGEKODE
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                    <HomeIcon />
+                    <MenuIcon />
                   </IconButton>
                 </Box>
               )}
             </MenuItem>
 
             {/* USER */}
-            {isCollapsed && (
+            {!isCollapsed && (
               <Box mb="25px">
                 <Box display="flex" justifyContent="center" alignItems="center">
                   <img
-                    src={`../../assets/logo-blue.png`}
+                    src={`../../assets/bridgekode-logo.png`}
                     alt="Brand Logo"
-                    width="100px"
-                    height="100px"
-                    style={{ cursor: "pointer", borderRadius: "50%" }}
+                    width="150px"
+                    height="auto"
+                    style={{ cursor: "pointer" }}
                   />
                 </Box>
                 <Box textAlign="center">
                   <Typography
-                    variant="h2"
+                    variant="h3"
                     color={colors.grey[100]}
                     fontWeight="bold"
-                    sx={{ m: "10px 0 0 0" }}
+                    sx={{ m: "25px 0 0 0" }}
                   >
-                    Bridgekode
+                    ADMINIS
                   </Typography>
                   <Typography variant="h5" color={colors.greenAccent[500]}>
-                    User Admin
+                    VP Fancy Admin
                   </Typography>
                 </Box>
               </Box>
             )}
 
             {/* MENU ITEMS */}
-            <Box paddingLeft={isCollapsed ? undefined : "10%"}></Box>
-          </Menu>
+            <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+              <Item
+                title="Dashboard"
+                to="/"
+                icon={<HomeIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
 
-          <IconButton>
-            <PeopleIcon />
-          </IconButton>
-          <IconButton>
-            <PeopleIcon />
-          </IconButton>
-          <IconButton>
-            <PeopleIcon />
-          </IconButton>
-          <IconButton>
-            <PeopleIcon />
-          </IconButton>
-          <IconButton>
-            <PeopleIcon />
-          </IconButton>
+              <Typography
+                variant="h6"
+                color={colors.grey[300]}
+                sx={{ m: "15px 0px 5px 20px" }}
+              >
+                Data
+              </Typography>
+              <Item
+                title="Manage Team"
+                to="/team"
+                icon={<EscalatorWarningIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Invoices Balances"
+                to="/invoices"
+                icon={<ReceiptLongIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Clients Information"
+                to="/clients"
+                icon={<FamilyRestroomIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Students Information"
+                to="/students"
+                icon={<GroupsIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+
+              <Typography
+                variant="h6"
+                color={colors.grey[300]}
+                sx={{ m: "15px 0px 5px 20px" }}
+              >
+                Pages
+              </Typography>
+              <Item
+                title="Profile Form"
+                to="/form"
+                icon={<PeopleIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Calendar"
+                to="/calendar"
+                icon={<CalendarMonthIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="FAQ Page"
+                to="/faq"
+                icon={<HelpIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Typography
+                variant="h6"
+                color={colors.grey[300]}
+                sx={{ m: "15px 0px 5px 20px" }}
+              >
+                Chart
+              </Typography>
+              <Item
+                title="Bar Chart"
+                to="/bar"
+                icon={<BarChartIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Pie Chart"
+                to="/pie"
+                icon={<PieChartOutlineIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Line Chart"
+                to="/line"
+                icon={<TimelineIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Geographical Chart"
+                to="/geography"
+                icon={<LocationOnIcon className="icons" />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+
+              {/* SIDEBAR FOOTER */}
+              <Box
+                sx={{
+                  m: "15px 0px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <IconButton sx={{ m: "0px 5px" }}>
+                  <SettingsIcon />
+                </IconButton>
+                <IconButton sx={{ m: "0px 5px" }}>
+                  <HomeIcon />
+                </IconButton>
+                <IconButton sx={{ m: "0px 5px" }}>
+                  <LightModeIcon />
+                </IconButton>
+              </Box>
+            </Box>
+          </Menu>
         </Sidebar>
       </Box>
     </>

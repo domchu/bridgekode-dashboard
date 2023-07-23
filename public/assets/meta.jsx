@@ -1,4 +1,5 @@
-<meta
+{
+  /* <meta
 name="description"
 content="Senior front-end developer with over 5+ years of experience developing front-end web apps based on React. Self-starter with a strong work ethic who approaches challenges with enthusiasm"
 />
@@ -16,4 +17,5 @@ content="https://media.licdn.com/dms/image/D4D35AQHqWNE6NeuHng/profile-framedpho
 name="url"
 property="og:url"
 content="https://www.richcode.vercel.dev"
-/>
+/> */
+}
