@@ -71,7 +71,7 @@ const SidebarLink = () => {
               icon={isCollapsed ? <MenuIcon /> : undefined}
               style={{ margin: "10px 0px 20px 0px", color: colors.grey[100] }}
             >
-              {isCollapsed && (
+              {!isCollapsed && (
                 <Box
                   display="flex"
                   justifyContent="space-between"
@@ -79,7 +79,7 @@ const SidebarLink = () => {
                   ml="15px"
                 >
                   <Typography variant="h3" color={colors.grey[100]}>
-                    ADMINIS
+                    BRIDGEKODE
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                     <MenuIcon />
@@ -107,10 +107,10 @@ const SidebarLink = () => {
                     fontWeight="bold"
                     sx={{ m: "10px 0 0 0" }}
                   >
-                    Bridgekode
+                    ADMINIS
                   </Typography>
                   <Typography variant="h5" color={colors.greenAccent[500]}>
-                    User/Admin
+                    USER
                   </Typography>
                 </Box>
               </Box>
