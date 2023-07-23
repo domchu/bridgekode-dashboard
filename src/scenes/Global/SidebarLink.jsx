@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, useTheme, Typography } from "@mui/material";
 import { tokens } from "../../theme";
+import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PeopleIcon from "@mui/icons-material/People";
-import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import HelpIcon from "@mui/icons-material/Help";
@@ -16,6 +16,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import GroupsIcon from "@mui/icons-material/Groups";
+import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 // import "react-pro-sidebar/dist/css/styles.css";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -141,26 +143,27 @@ const SidebarLink = () => {
                 setSelected={setSelected}
               />
               <Item
-                title="Clients Information"
-                to="/clients"
-                icon={<ReceiptLongIcon />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Students Information"
-                to="/students"
-                icon={<ReceiptLongIcon />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
                 title="Invoices Balances"
                 to="/invoices"
                 icon={<ReceiptLongIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
+              <Item
+                title="Clients Information"
+                to="/clients"
+                icon={<FamilyRestroomIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Students Information"
+                to="/students"
+                icon={<GroupsIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+
               <Typography
                 variant="h6"
                 color={colors.grey[300]}
