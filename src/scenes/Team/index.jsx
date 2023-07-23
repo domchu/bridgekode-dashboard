@@ -9,7 +9,19 @@ import SecurityIcon from "@mui/icons-material/Security";
 import LockIcon from "@mui/icons-material/Lock";
 
 const Team = () => {
-  return <div>Team</div>;
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+  return (
+    <>
+      <Box>
+        <Header title="Team" subtitle="Managing The Team Members" />
+        <Box>
+          <DataGrid />
+        </Box>
+      </Box>
+    </>
+  );
 };
 
 export default Team;
