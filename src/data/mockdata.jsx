@@ -13,7 +13,7 @@ export const mockDataTeam = [
     email: "ochudominic@gmail.com",
     age: "30",
     phone: "07034278995",
-    access: "admin",
+    access: "user",
   },
   {
     id: "3",
@@ -21,7 +21,7 @@ export const mockDataTeam = [
     email: "ochudominic@gmail.com",
     age: "30",
     phone: "07034278995",
-    access: "admin",
+    access: "manager",
   },
   {
     id: "4",
