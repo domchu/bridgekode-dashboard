@@ -120,13 +120,14 @@ const SidebarLink = () => {
 
             {/* MENU ITEMS */}
             <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-              <Item
-                title="Dashboard"
-                to="/"
-                icon={<HomeIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
+              <Link to="/">
+                <Item
+                  title="Dashboard"
+                  icon={<HomeIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
 
               <Typography
                 variant="h6"
@@ -135,34 +136,43 @@ const SidebarLink = () => {
               >
                 Data
               </Typography>
-              <Item
-                title="Manage Team"
-                to="/team"
-                icon={<EscalatorWarningIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Invoices Balances"
-                to="/invoices"
-                icon={<ReceiptLongIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Clients Information"
-                to="/clients"
-                icon={<FamilyRestroomIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Students Information"
-                to="/students"
-                icon={<GroupsIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
+
+              <Link to="/team">
+                <Item
+                  title="Manage Team"
+                  icon={<EscalatorWarningIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+
+              <Link to="/invoices">
+                <Item
+                  title="Invoices Balances"
+                  icon={<ReceiptLongIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+
+              <Link to=""></Link>
+              <Link to="/clients">
+                <Item
+                  title="Clients Information"
+                  icon={<FamilyRestroomIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+
+              <Link to="/students">
+                <Item
+                  title="Students Information"
+                  icon={<GroupsIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
 
               <Typography
                 variant="h6"
@@ -171,27 +181,33 @@ const SidebarLink = () => {
               >
                 Pages
               </Typography>
-              <Item
-                title="Profile Form"
-                to="/form"
-                icon={<PeopleIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Calendar"
-                to="/calendar"
-                icon={<CalendarMonthIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="FAQ Page"
-                to="/faq"
-                icon={<HelpIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
+
+              <Link to="/form">
+                <Item
+                  title="Profile Form"
+                  icon={<PeopleIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+
+              <Link to="/calendar">
+                <Item
+                  title="Calendar"
+                  icon={<CalendarMonthIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+              <Link to="/faq">
+                <Item
+                  title="FAQ Page"
+                  to="/faq"
+                  icon={<HelpIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
               <Typography
                 variant="h6"
                 color={colors.grey[300]}
@@ -199,34 +215,41 @@ const SidebarLink = () => {
               >
                 Chart
               </Typography>
-              <Item
-                title="Bar Chart"
-                to="/bar"
-                icon={<BarChartIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Pie Chart"
-                to="/pie"
-                icon={<PieChartOutlineIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Line Chart"
-                to="/line"
-                icon={<TimelineIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
-              <Item
-                title="Geographical Chart"
-                to="/geography"
-                icon={<LocationOnIcon className="icons" />}
-                selected={selected}
-                setSelected={setSelected}
-              />
+
+              <Link to="/bar">
+                <Item
+                  title="Bar Chart"
+                  icon={<BarChartIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+
+              <Link to="/pie">
+                <Item
+                  title="Pie Chart"
+                  icon={<PieChartOutlineIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+
+              <Link to="/line">
+                <Item
+                  title="Line Chart"
+                  icon={<TimelineIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
+              <Link to="/geography">
+                <Item
+                  title="Geographical Chart"
+                  icon={<LocationOnIcon className="icons" />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </Link>
 
               {/* SIDEBAR FOOTER */}
               <Box
