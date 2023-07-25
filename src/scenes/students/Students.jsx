@@ -11,12 +11,18 @@ const Students = () => {
           title="BRIDGEKODE STUDENTS"
           subtitle="List Of Bridgekode Students "
         />
-      </Box>
-      <Box>
-        <Link to="/students/all">All Students</Link>
-        <Link to="/students/list">List View</Link>
-        <Link to="/students/add">Add Students</Link>
-        <Outlet />
+        <Box ml="20px">
+          <Link to="/students/all" className="btn">
+            All Students
+          </Link>
+          <Link to="/students/list" className="btn">
+            List View
+          </Link>
+          <Link to="/students/add" className="btn">
+            Add Students
+          </Link>
+          <Outlet />
+        </Box>
       </Box>
     </>
   );

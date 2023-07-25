@@ -1,7 +1,11 @@
 import React from "react";
 
-const all = () => {
-  return <div>all</div>;
+const All = () => {
+  return (
+    <>
+      <h1>list of all the students</h1>
+    </>
+  );
 };
 
-export default all;
+export default All;

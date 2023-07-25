@@ -43,3 +43,12 @@ html, body, #root, .app, .content {
   /* color: cornflowerblue; */
   font-size: 1.5rem !important;
 }
+.btn{
+  background-color: grey;
+  padding: 5px;
+  margin: 0px 15px 0px 0px;
+  border-radius: 5px;
+font-size: 15px;
+color: #fff;
+/* margin-bottom: 20px; */
+}

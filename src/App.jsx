@@ -36,13 +36,13 @@ function App() {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/clients" element={<Clients />} />
-                {/* router */}
+                {/* NESTED ROUTES*/}
                 <Route path="/students" element={<Students />}>
                   <Route path="list" element={<ListView />} />
                   <Route path="all" element={<All />} />
                   <Route path="add" element={<AddStudents />} />
                 </Route>
-                {/* router */}
+                {/* NESTED ROUTES */}
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/form" element={<Form />} />
                 <Route path="/calendar" element={<Calendar />} />
