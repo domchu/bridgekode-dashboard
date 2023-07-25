@@ -155,7 +155,6 @@ const SidebarLink = () => {
                 />
               </Link>
 
-              <Link to=""></Link>
               <Link to="/clients">
                 <Item
                   title="Clients Information"
@@ -202,7 +201,6 @@ const SidebarLink = () => {
               <Link to="/faq">
                 <Item
                   title="FAQ Page"
-                  to="/faq"
                   icon={<HelpIcon className="icons" />}
                   selected={selected}
                   setSelected={setSelected}
