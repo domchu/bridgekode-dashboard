@@ -7,7 +7,7 @@ import SidebarLink from "./Scenes/Global/SidebarLink";
 import Dashboard from "./Scenes/dashboard";
 import Team from "./Scenes/team";
 import Clients from "./Scenes/clients";
-import Students from "./Scenes/students";
+import Students from "./Scenes/students/Students";
 import Invoices from "./Scenes/invoices";
 import Form from "./Scenes/form";
 import Calendar from "./Scenes/calendar";
@@ -16,6 +16,9 @@ import Bar from "./Scenes/bar";
 import Line from "./Scenes/line";
 import Pie from "./Scenes/pie";
 import Geography from "./Scenes/geography";
+import AddStudents from "./Scenes/students/add";
+import ListView from "./Scenes/students/list";
+import All from "./Scenes/students/all";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -33,7 +36,13 @@ function App() {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/clients" element={<Clients />} />
-                <Route path="/students" element={<Students />} />
+                {/* NESTED ROUTES*/}
+                <Route path="/students" element={<Students />}>
+                  <Route path="list" element={<ListView />} />
+                  <Route path="all" element={<All />} />
+                  <Route path="add" element={<AddStudents />} />
+                </Route>
+                {/* NESTED ROUTES */}
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/form" element={<Form />} />
                 <Route path="/calendar" element={<Calendar />} />
