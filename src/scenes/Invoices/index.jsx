@@ -2,7 +2,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataInvoices } from "../../data/mockData";
-import Header from "../../components/Header";
+import Header from "../../Components/Header";
 
 const Invoices = () => {
   const theme = useTheme();
@@ -62,9 +62,9 @@ const Invoices = () => {
             backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
-          },
+          // "& .MuiDataGrid-virtualScroller": {
+          //   backgroundColor: colors.primary[400],
+          // },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
             backgroundColor: colors.blueAccent[700],

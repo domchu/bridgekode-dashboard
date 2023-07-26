@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
-import Header from "../../components/Header";
+import Header from "../../Components/Header";
 import { useTheme } from "@mui/material";
 
 const Clients = () => {
@@ -75,9 +75,9 @@ const Clients = () => {
             backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
-          "& .MuiDataGrid-virtualScroller": {
-            // backgroundColor: colors.primary[400],
-          },
+          // "& .MuiDataGrid-virtualScroller": {
+          //   backgroundColor: colors.primary[400],
+          // },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
             backgroundColor: colors.blueAccent[700],
@@ -93,7 +93,7 @@ const Clients = () => {
         <DataGrid
           rows={mockDataContacts}
           columns={columns}
-          components={{ Toolbar: GridToolbar }}
+          slots={{ Toolbar: GridToolbar }}
         />
       </Box>
     </Box>
