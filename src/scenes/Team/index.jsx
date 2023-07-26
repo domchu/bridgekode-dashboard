@@ -7,6 +7,7 @@ import Header from "../../Components/Header";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import MenuIcon from "@mui/icons-material/Menu";
+// import Footer from "../../Components/Footer";
 
 const Team = () => {
   const theme = useTheme();
@@ -109,6 +110,7 @@ const Team = () => {
           <DataGrid rows={mockDataTeam} columns={columns} />
         </Box>
       </Box>
+      {/* <Footer /> */}
     </>
   );
 };

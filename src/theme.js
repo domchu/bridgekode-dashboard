@@ -1,6 +1,5 @@
 import { createContext, useMemo, useState } from "react";
 import { createTheme } from "@mui/material/styles";
-// import { tokens } from "@mui/icons-material";
 
 // COLORS DESIGN TOKENS
 export const tokens = (mode) => ({
@@ -197,20 +196,21 @@ export const themeSettings = (mode) => {
 // CONTEXT FOR COLOR MODE
 
 export const colorModeContext = createContext({
-  toggleColorMode: () =>{}
-})
+  toggleColorMode: () => {},
+});
 
 export const useMode = () => {
-  const [mode, setMode] = useState("dark")
+  const [mode, setMode] = useState("dark");
 
   const colorMode = useMemo(
     () => ({
-      toggleColorMode: () => setMode((prev) => (prev === "light" ? "dark" : "light")),
+      toggleColorMode: () =>
+        setMode((prev) => (prev === "light" ? "dark" : "light")),
     }),
     []
   );
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
   return [theme, colorMode];
+};
 
-}
