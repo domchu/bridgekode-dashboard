@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../../Components/Header";
 import { Box, Button, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
 const dashboard = () => {
   const theme = useTheme();
@@ -22,7 +22,7 @@ const dashboard = () => {
                 padding: "10px 20px",
               }}
             >
-              <FileDownloadIcon sx={{ mr: "10px" }} />
+              <DownloadOutlinedIcon sx={{ mr: "10px" }} />
               Download Reports
             </Button>
           </Box>
